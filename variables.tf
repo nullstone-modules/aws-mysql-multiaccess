@@ -19,7 +19,7 @@ EOF
 }
 
 variable "additional_database_names" {
-  type        = list(string)
+  type        = set(string)
   description = <<EOF
 Additional databases to create in the mysql cluster. If any already exist, they will be reused.
 For each database, a new user will be created and granted owner permissions to the database schema.
