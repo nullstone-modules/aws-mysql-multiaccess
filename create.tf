@@ -40,7 +40,7 @@ data "aws_lambda_invocation" "create-db-access" {
 }
 
 data "aws_lambda_invocation" "create-additional-databases" {
-  for_each = try(var.additional_database_names, [])
+  for_each = coalesce(var.additional_database_names, [])
 
   function_name = local.db_admin_func_name
 
@@ -53,7 +53,7 @@ data "aws_lambda_invocation" "create-additional-databases" {
 }
 
 data "aws_lambda_invocation" "create-additional-access" {
-  for_each = try(var.additional_database_names, [])
+  for_each = coalesce(var.additional_database_names, [])
 
   function_name = local.db_admin_func_name
 
