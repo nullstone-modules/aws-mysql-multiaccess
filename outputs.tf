@@ -19,7 +19,7 @@ output "secrets" {
   value = [
     {
       name  = "MYSQL_PASSWORD"
-      value = random_password.this.result
+      value = local.password
     },
     {
       name  = "MYSQL_URL"
