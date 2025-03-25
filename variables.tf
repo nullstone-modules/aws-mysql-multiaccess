@@ -29,6 +29,5 @@ EOF
 
 locals {
   security_group_id = var.app_metadata["security_group_id"]
-  username          = local.resource_name
   database_name     = coalesce(var.database_name, local.block_name)
 }
