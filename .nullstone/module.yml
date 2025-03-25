@@ -1,4 +1,4 @@
-org_name: Evolve
+org_name: nullstone
 name: aws-mysql-multiaccess
 friendly_name: MySQL Multi-Access
 description: Grants an application access to a primary mysql database as well as additional databases
